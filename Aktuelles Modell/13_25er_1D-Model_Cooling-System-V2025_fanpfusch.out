@@ -1,0 +1,328 @@
+
+Feature: (GTsuite/10-mar-2026)
+GT-SUITE workstation: (PC-Moritz)
+License Server: (lizenz-academic-gt-suite.hs-esslingen.de)
+License entitlement ID: (SRZHPBEGZFBBEIEHXCLYTZMIOYEQJD)
+License ID: (1308912589)
+
+ INFO
+ ==============================================================================
+ GT-SUITE - GAMMA TECHNOLOGIES
+ ------------------------------------------------------------------------------
+ License  :  GT-SUITE
+ Version  :  2025
+ Build #  :  1.0000
+ Platform :  Windows 64 bit
+ Date     :  23-AUG-25  Time: 15:16:30
+ File     :  C:\Users\mobar\Desktop\Forschungsprojekt Auerbach\01_MP_KKL_Simu\02_GitHub\thermomanagement-formula-student-main\13_25er_1D-Model_Cooling-System-V2025_fanpfusch.dat
+ ==============================================================================
+  
+ INFO ----- Definition of Messages -----
+       WARN:    Try to correct       - might affect accuracy
+       ALERT:   Should be corrected  - likely to produce inaccurate results
+       SEVERE:  Must be corrected    - will produce meaningless results
+  
+ Running as v2025
+  
+  
+ *STATUS: ------------------ Start of Case 1 -----------------------------------
+  
+  
+  Case Number:        1 of  1
+  Case Setup Number:  13
+  
+ Running as v2025
+  
+ INFO FluidLiqCompressible object h2o has been identified as a water species. 
+      Since Clausius-Clapeyron Based Saturation Curve Calculation for Water in
+      Advanced Setup/Flow is turned off, the Wagner-Pruss equation will be
+      used to predict saturation properties.
+ ========================================================================
+  Completed processing of FanSpecs Object: Fan_Specs
+ ========================================================================
+ INFO Data points have been identified on the 5000. rpm speed line
+      for PumpMap which will result in a derivative of pressure rise with
+      respect to flow rate that is positive in some region (also known
+      as droop). To avoid problems during a simulation, these points have
+      been adjusted so the above mentioned derivative is always negative.
+      Generating PumpSpecs
+  
+ ========================================================================
+      Generating PumpSpecs
+  
+ INFO Thermal solver for column #1 set to transient.
+  
+ INFO Wall Temperature Update Interval is set to "def".
+      The timestep for wall temperature calculations will be  0.1 s.
+      (The largest step used by the Implicit or Quasi-Steady flow solution.)
+  
+ INFO ******** Flow Part Count ********
+ Flow Solution Cluster                   Pipe Subvolumes Flow Volumes
+ 1 (Column 1)                              1002            1008
+ 2 (Column 1)                               364             369
+  
+*ALERT:FlowPDropTableRef/Pressure_Drop_Cooling_Plate_25_V35
+      has static pressure drop entered but it's used at 2 locations
+      which have different upstream/downstream areas. This might lead
+      to wrong results. Please make a copy of this object and use it 
+      at the 2nd location.
+*ALERT:A FluidReservoir and/or Tank3D part(s) were detected in a flow circuit 
+      using the Implicit flow solver, but the attribute 'Alternate Implicit
+      Solver for Faster Convergence of Multi-Fluid Flows' in Advanced Setup ->
+      Flow is set to "off". Setting it to 'v2019' can help improve convergence
+      and reduce computation time.
+  
+  
+*WARN:The circuit "Flow 1 (Column 1)"
+      appears to be a closed, fixed-volume system.
+      Calculation of the absolute pressure is extremely dependent on
+      temperature for a liquid and may not be reliable.
+      Convergence difficulties may be encountered.
+  
+  
+ INFO ****** Circuit/Species Summary ******
+ Solution cluster: 1 (Column 1)
+   Circuit: Flow 1 (Column 1) (Part: Cooling_Jacket_Front)
+     h2o (=> h2o-vap)
+     air2
+     h2o-vap (=> h2o)
+ Solution cluster: 2 (Column 1)
+   Circuit: Flow 2 (Column 1) (Part: Fan-In-03)
+     air2
+  
+  
+ INFO Total Number of Parts =  3422
+  
+  
+ *STATUS: ------------------ Start of Time Stepping, Case 1 --------------------
+  
+ Case#   1, Flow Step       20, dt = 0.100    , t =  2.0000     CPU: 0:00:04.74
+ Case#   1, Flow Step       40, dt = 0.100    , t =  4.0000     CPU: 0:00:05.97
+ Case#   1, Flow Step       60, dt = 0.100    , t =  6.0000     CPU: 0:00:06.98
+ Case#   1, Flow Step       80, dt = 0.100    , t =  8.0000     CPU: 0:00:07.81
+ Case#   1, Flow Step      100, dt = 0.100    , t =  10.000     CPU: 0:00:08.49
+ Case#   1, Flow Step      200, dt = 0.100    , t =  20.000     CPU: 0:00:11.67
+ Case#   1, Flow Step      300, dt = 0.100    , t =  30.000     CPU: 0:00:14.72
+ Case#   1, Flow Step      400, dt = 0.100    , t =  40.000     CPU: 0:00:17.57
+ Case#   1, Flow Step      500, dt = 0.100    , t =  50.000     CPU: 0:00:20.42
+ Case#   1, Flow Step      600, dt = 0.100    , t =  60.000     CPU: 0:00:23.41
+ Case#   1, Flow Step      700, dt = 0.100    , t =  70.000     CPU: 0:00:26.30
+ Case#   1, Flow Step      800, dt = 0.100    , t =  80.000     CPU: 0:00:29.17
+ Case#   1, Flow Step      900, dt = 0.100    , t =  90.000     CPU: 0:00:32.16
+ Case#   1, Flow Step     1000, dt = 0.100    , t =  100.00     CPU: 0:00:35.16
+ Case#   1, Flow Step     1100, dt = 0.100    , t =  110.00     CPU: 0:00:38.18
+ Case#   1, Flow Step     1200, dt = 0.100    , t =  120.00     CPU: 0:00:41.13
+ Case#   1, Flow Step     1300, dt = 0.100    , t =  130.00     CPU: 0:00:44.02
+ Case#   1, Flow Step     1400, dt = 0.100    , t =  140.00     CPU: 0:00:46.82
+ Case#   1, Flow Step     1500, dt = 0.100    , t =  150.00     CPU: 0:00:49.76
+ Case#   1, Flow Step     1600, dt = 0.100    , t =  160.00     CPU: 0:00:52.91
+ Case#   1, Flow Step     1700, dt = 0.100    , t =  170.00     CPU: 0:00:55.96
+ Case#   1, Flow Step     1800, dt = 0.100    , t =  180.00     CPU: 0:00:59.12
+ Case#   1, Flow Step     1900, dt = 0.100    , t =  190.00     CPU: 0:01:02.22
+ Case#   1, Flow Step     2000, dt = 0.100    , t =  200.00     CPU: 0:01:05.20
+ Case#   1, Flow Step     2100, dt = 0.100    , t =  210.00     CPU: 0:01:08.09
+ Case#   1, Flow Step     2200, dt = 0.100    , t =  220.00     CPU: 0:01:11.10
+ Case#   1, Flow Step     2300, dt = 0.100    , t =  230.00     CPU: 0:01:14.16
+ Case#   1, Flow Step     2400, dt = 0.100    , t =  240.00     CPU: 0:01:17.33
+ Case#   1, Flow Step     2500, dt = 0.100    , t =  250.00     CPU: 0:01:20.52
+ Case#   1, Flow Step     2600, dt = 0.100    , t =  260.00     CPU: 0:01:23.67
+ Case#   1, Flow Step     2700, dt = 0.100    , t =  270.00     CPU: 0:01:26.81
+ Case#   1, Flow Step     2800, dt = 0.100    , t =  280.00     CPU: 0:01:29.85
+ Case#   1, Flow Step     2900, dt = 0.100    , t =  290.00     CPU: 0:01:32.80
+ Case#   1, Flow Step     3000, dt = 0.100    , t =  300.00     CPU: 0:01:35.80
+ Case#   1, Flow Step     3100, dt = 0.100    , t =  310.00     CPU: 0:01:38.92
+ Case#   1, Flow Step     3200, dt = 0.100    , t =  320.00     CPU: 0:01:42.12
+ Case#   1, Flow Step     3300, dt = 0.100    , t =  330.00     CPU: 0:01:45.35
+ Case#   1, Flow Step     3400, dt = 0.100    , t =  340.00     CPU: 0:01:48.57
+ Case#   1, Flow Step     3500, dt = 0.100    , t =  350.00     CPU: 0:01:51.69
+ Case#   1, Flow Step     3600, dt = 0.100    , t =  360.00     CPU: 0:01:54.81
+ Case#   1, Flow Step     3700, dt = 0.100    , t =  370.00     CPU: 0:01:57.82
+ Case#   1, Flow Step     3800, dt = 0.100    , t =  380.00     CPU: 0:02:00.97
+ Case#   1, Flow Step     3900, dt = 0.100    , t =  390.00     CPU: 0:02:04.14
+ Case#   1, Flow Step     4000, dt = 0.100    , t =  400.00     CPU: 0:02:07.35
+ Case#   1, Flow Step     4100, dt = 0.100    , t =  410.00     CPU: 0:02:10.55
+ Case#   1, Flow Step     4200, dt = 0.100    , t =  420.00     CPU: 0:02:13.81
+ Case#   1, Flow Step     4300, dt = 0.100    , t =  430.00     CPU: 0:02:16.93
+ Case#   1, Flow Step     4400, dt = 0.100    , t =  440.00     CPU: 0:02:20.08
+ Case#   1, Flow Step     4500, dt = 0.100    , t =  450.00     CPU: 0:02:22.99
+ Case#   1, Flow Step     4600, dt = 0.100    , t =  460.00     CPU: 0:02:26.14
+ Case#   1, Flow Step     4700, dt = 0.100    , t =  470.00     CPU: 0:02:29.34
+ Case#   1, Flow Step     4800, dt = 0.100    , t =  480.00     CPU: 0:02:32.52
+ Case#   1, Flow Step     4900, dt = 0.100    , t =  490.00     CPU: 0:02:35.87
+ Case#   1, Flow Step     5000, dt = 0.100    , t =  500.00     CPU: 0:02:39.05
+ Case#   1, Flow Step     5100, dt = 0.100    , t =  510.00     CPU: 0:02:42.27
+ Case#   1, Flow Step     5200, dt = 0.100    , t =  520.00     CPU: 0:02:45.32
+ Case#   1, Flow Step     5300, dt = 0.100    , t =  530.00     CPU: 0:02:48.32
+ Case#   1, Flow Step     5400, dt = 0.100    , t =  540.00     CPU: 0:02:51.46
+ Case#   1, Flow Step     5500, dt = 0.100    , t =  550.00     CPU: 0:02:54.83
+ Case#   1, Flow Step     5600, dt = 0.100    , t =  560.00     CPU: 0:02:58.06
+ Case#   1, Flow Step     5700, dt = 0.100    , t =  570.00     CPU: 0:03:01.36
+ Case#   1, Flow Step     5800, dt = 0.100    , t =  580.00     CPU: 0:03:04.61
+ Case#   1, Flow Step     5900, dt = 0.100    , t =  590.00     CPU: 0:03:07.74
+ Case#   1, Flow Step     6000, dt = 0.100    , t =  600.00     CPU: 0:03:10.74
+ Case#   1, Flow Step     6100, dt = 0.100    , t =  610.00     CPU: 0:03:13.81
+ Case#   1, Flow Step     6200, dt = 0.100    , t =  620.00     CPU: 0:03:16.93
+ Case#   1, Flow Step     6300, dt = 0.100    , t =  630.00     CPU: 0:03:20.21
+ Case#   1, Flow Step     6400, dt = 0.100    , t =  640.00     CPU: 0:03:23.56
+ Case#   1, Flow Step     6500, dt = 0.100    , t =  650.00     CPU: 0:03:26.81
+ Case#   1, Flow Step     6600, dt = 0.100    , t =  660.00     CPU: 0:03:29.97
+ Case#   1, Flow Step     6700, dt = 0.100    , t =  670.00     CPU: 0:03:33.04
+ Case#   1, Flow Step     6800, dt = 0.100    , t =  680.00     CPU: 0:03:35.94
+ Case#   1, Flow Step     6900, dt = 0.100    , t =  690.00     CPU: 0:03:39.08
+ Case#   1, Flow Step     7000, dt = 0.100    , t =  700.00     CPU: 0:03:42.41
+ Case#   1, Flow Step     7100, dt = 0.100    , t =  710.00     CPU: 0:03:45.69
+ Case#   1, Flow Step     7200, dt = 0.100    , t =  720.00     CPU: 0:03:48.98
+ Case#   1, Flow Step     7300, dt = 0.100    , t =  730.00     CPU: 0:03:52.38
+ Case#   1, Flow Step     7400, dt = 0.100    , t =  740.00     CPU: 0:03:55.65
+ Case#   1, Flow Step     7500, dt = 0.100    , t =  750.00     CPU: 0:03:58.82
+ Case#   1, Flow Step     7600, dt = 0.100    , t =  760.00     CPU: 0:04:01.71
+ Case#   1, Flow Step     7700, dt = 0.100    , t =  770.00     CPU: 0:04:04.97
+ Case#   1, Flow Step     7800, dt = 0.100    , t =  780.00     CPU: 0:04:10.12
+ Case#   1, Flow Step     7900, dt = 0.100    , t =  790.00     CPU: 0:04:14.09
+ Case#   1, Flow Step     8000, dt = 0.100    , t =  800.00     CPU: 0:04:18.45
+ Case#   1, Flow Step     8100, dt = 0.100    , t =  810.00     CPU: 0:04:23.28
+ Case#   1, Flow Step     8200, dt = 0.100    , t =  820.00     CPU: 0:04:27.93
+ Case#   1, Flow Step     8300, dt = 0.100    , t =  830.00     CPU: 0:04:32.37
+ Case#   1, Flow Step     8400, dt = 0.100    , t =  840.00     CPU: 0:04:36.36
+ Case#   1, Flow Step     8500, dt = 0.100    , t =  850.00     CPU: 0:04:40.86
+ Case#   1, Flow Step     8600, dt = 0.100    , t =  860.00     CPU: 0:04:44.36
+ Case#   1, Flow Step     8700, dt = 0.100    , t =  870.00     CPU: 0:04:47.75
+ Case#   1, Flow Step     8800, dt = 0.100    , t =  880.00     CPU: 0:04:50.81
+ Case#   1, Flow Step     8900, dt = 0.100    , t =  890.00     CPU: 0:04:53.38
+ Case#   1, Flow Step     9000, dt = 0.100    , t =  900.00     CPU: 0:04:55.95
+ Case#   1, Flow Step     9100, dt = 0.100    , t =  910.00     CPU: 0:04:58.52
+ Case#   1, Flow Step     9200, dt = 0.100    , t =  920.00     CPU: 0:05:01.06
+ Case#   1, Flow Step     9300, dt = 0.100    , t =  930.00     CPU: 0:05:03.64
+ Case#   1, Flow Step     9400, dt = 0.100    , t =  940.00     CPU: 0:05:06.21
+ Case#   1, Flow Step     9500, dt = 0.100    , t =  950.00     CPU: 0:05:08.78
+ Case#   1, Flow Step     9600, dt = 0.100    , t =  960.00     CPU: 0:05:11.71
+ Case#   1, Flow Step     9700, dt = 0.100    , t =  970.00     CPU: 0:05:15.28
+ Case#   1, Flow Step     9800, dt = 0.100    , t =  980.00     CPU: 0:05:18.93
+ Case#   1, Flow Step     9900, dt = 0.100    , t =  990.00     CPU: 0:05:22.66
+ Case#   1, Flow Step    10000, dt = 0.100    , t =  1000.0     CPU: 0:05:26.22
+ Case#   1, Flow Step    10100, dt = 0.100    , t =  1010.0     CPU: 0:05:29.69
+ Case#   1, Flow Step    10200, dt = 0.100    , t =  1020.0     CPU: 0:05:32.99
+ Case#   1, Flow Step    10300, dt = 0.100    , t =  1030.0     CPU: 0:05:36.55
+ Case#   1, Flow Step    10400, dt = 0.100    , t =  1040.0     CPU: 0:05:40.16
+ Case#   1, Flow Step    10500, dt = 0.100    , t =  1050.0     CPU: 0:05:43.76
+ Case#   1, Flow Step    10600, dt = 0.100    , t =  1060.0     CPU: 0:05:47.36
+ Case#   1, Flow Step    10700, dt = 0.100    , t =  1070.0     CPU: 0:05:50.77
+ Case#   1, Flow Step    10800, dt = 0.100    , t =  1080.0     CPU: 0:05:53.88
+ Case#   1, Flow Step    10900, dt = 0.100    , t =  1090.0     CPU: 0:05:57.01
+ Case#   1, Flow Step    11000, dt = 0.100    , t =  1100.0     CPU: 0:05:59.98
+ Case#   1, Flow Step    11100, dt = 0.100    , t =  1110.0     CPU: 0:06:04.07
+ Case#   1, Flow Step    11200, dt = 0.100    , t =  1120.0     CPU: 0:06:07.52
+ Case#   1, Flow Step    11300, dt = 0.100    , t =  1130.0     CPU: 0:06:10.92
+ Case#   1, Flow Step    11400, dt = 0.100    , t =  1140.0     CPU: 0:06:14.48
+ Case#   1, Flow Step    11500, dt = 0.100    , t =  1150.0     CPU: 0:06:17.82
+ Case#   1, Flow Step    11600, dt = 0.100    , t =  1160.0     CPU: 0:06:20.90
+ Case#   1, Flow Step    11700, dt = 0.100    , t =  1170.0     CPU: 0:06:23.83
+ Case#   1, Flow Step    11800, dt = 0.100    , t =  1180.0     CPU: 0:06:26.96
+ Case#   1, Flow Step    11900, dt = 0.100    , t =  1190.0     CPU: 0:06:30.37
+ Case#   1, Flow Step    12000, dt = 0.100    , t =  1200.0     CPU: 0:06:33.72
+ Case#   1, Flow Step    12100, dt = 0.100    , t =  1210.0     CPU: 0:06:37.15
+ Case#   1, Flow Step    12200, dt = 0.100    , t =  1220.0     CPU: 0:06:40.72
+ Case#   1, Flow Step    12300, dt = 0.100    , t =  1230.0     CPU: 0:06:44.04
+ Case#   1, Flow Step    12400, dt = 0.100    , t =  1240.0     CPU: 0:06:48.19
+ Case#   1, Flow Step    12500, dt = 0.100    , t =  1250.0     CPU: 0:06:51.06
+ Case#   1, Flow Step    12600, dt = 0.100    , t =  1260.0     CPU: 0:06:54.33
+ Case#   1, Flow Step    12700, dt = 0.100    , t =  1270.0     CPU: 0:06:57.72
+ Case#   1, Flow Step    12800, dt = 0.100    , t =  1280.0     CPU: 0:07:01.20
+ Case#   1, Flow Step    12900, dt = 0.100    , t =  1290.0     CPU: 0:07:04.68
+ Case#   1, Flow Step    13000, dt = 0.100    , t =  1300.0     CPU: 0:07:08.21
+ Case#   1, Flow Step    13100, dt = 0.100    , t =  1310.0     CPU: 0:07:11.52
+ Case#   1, Flow Step    13200, dt = 0.100    , t =  1320.0     CPU: 0:07:14.77
+ Case#   1, Flow Step    13300, dt = 0.100    , t =  1330.0     CPU: 0:07:17.75
+ Case#   1, Flow Step    13400, dt = 0.100    , t =  1340.0     CPU: 0:07:21.00
+ Case#   1, Flow Step    13500, dt = 0.100    , t =  1350.0     CPU: 0:07:24.44
+ Case#   1, Flow Step    13600, dt = 0.100    , t =  1360.0     CPU: 0:07:27.98
+ Case#   1, Flow Step    13700, dt = 0.100    , t =  1370.0     CPU: 0:07:32.35
+ Case#   1, Flow Step    13800, dt = 0.100    , t =  1380.0     CPU: 0:07:35.84
+ Case#   1, Flow Step    13900, dt = 0.100    , t =  1390.0     CPU: 0:07:38.96
+ Case#   1, Flow Step    14000, dt = 0.100    , t =  1400.0     CPU: 0:07:42.15
+ Case#   1, Flow Step    14100, dt = 0.100    , t =  1410.0     CPU: 0:07:45.34
+ Case#   1, Flow Step    14200, dt = 0.100    , t =  1420.0     CPU: 0:07:48.71
+ Case#   1, Flow Step    14300, dt = 0.100    , t =  1430.0     CPU: 0:07:52.18
+ Case#   1, Flow Step    14400, dt = 0.100    , t =  1440.0     CPU: 0:07:55.68
+ Case#   1, Flow Step    14500, dt = 0.100    , t =  1450.0     CPU: 0:07:59.25
+ Case#   1, Flow Step    14600, dt = 0.100    , t =  1460.0     CPU: 0:08:02.66
+ Case#   1, Flow Step    14700, dt = 0.100    , t =  1470.0     CPU: 0:08:05.88
+ Case#   1, Flow Step    14800, dt = 0.100    , t =  1480.0     CPU: 0:08:08.93
+ Case#   1, Flow Step    14900, dt = 0.100    , t =  1490.0     CPU: 0:08:12.25
+ Case#   1, Flow Step    15000, dt = 0.100    , t =  1500.0     CPU: 0:08:15.77
+ Case#   1, Flow Step    15100, dt = 0.100    , t =  1510.0     CPU: 0:08:19.21
+ Case#   1, Flow Step    15200, dt = 0.100    , t =  1520.0     CPU: 0:08:22.79
+ Case#   1, Flow Step    15300, dt = 0.100    , t =  1530.0     CPU: 0:08:26.34
+ Case#   1, Flow Step    15400, dt = 0.100    , t =  1540.0     CPU: 0:08:29.79
+ Case#   1, Flow Step    15500, dt = 0.100    , t =  1550.0     CPU: 0:08:33.07
+ Case#   1, Flow Step    15600, dt = 0.100    , t =  1560.0     CPU: 0:08:36.05
+ Case#   1, Flow Step    15700, dt = 0.100    , t =  1570.0     CPU: 0:08:39.50
+ Case#   1, Flow Step    15800, dt = 0.100    , t =  1580.0     CPU: 0:08:42.98
+ Case#   1, Flow Step    15900, dt = 0.100    , t =  1590.0     CPU: 0:08:48.17
+ Case#   1, Flow Step    16000, dt = 0.100    , t =  1600.0     CPU: 0:08:51.78
+ Case#   1, Flow Step    16100, dt = 0.100    , t =  1610.0     CPU: 0:08:55.38
+ Case#   1, Flow Step    16200, dt = 0.100    , t =  1620.0     CPU: 0:08:58.73
+ Case#   1, Flow Step    16300, dt = 0.100    , t =  1630.0     CPU: 0:09:02.07
+ Case#   1, Flow Step    16400, dt = 0.100    , t =  1640.0     CPU: 0:09:05.10
+ Case#   1, Flow Step    16500, dt = 0.100    , t =  1650.0     CPU: 0:09:08.60
+ Case#   1, Flow Step    16600, dt = 0.100    , t =  1660.0     CPU: 0:09:12.12
+ Case#   1, Flow Step    16700, dt = 0.100    , t =  1670.0     CPU: 0:09:15.75
+ Case#   1, Flow Step    16800, dt = 0.100    , t =  1680.0     CPU: 0:09:19.32
+ Case#   1, Flow Step    16900, dt = 0.100    , t =  1690.0     CPU: 0:09:22.87
+ Case#   1, Flow Step    17000, dt = 0.100    , t =  1700.0     CPU: 0:09:26.09
+ Case#   1, Flow Step    17100, dt = 0.100    , t =  1710.0     CPU: 0:09:30.21
+ Case#   1, Flow Step    17200, dt = 0.100    , t =  1720.0     CPU: 0:09:33.37
+ Case#   1, Flow Step    17300, dt = 0.100    , t =  1730.0     CPU: 0:09:36.83
+ Case#   1, Flow Step    17400, dt = 0.100    , t =  1740.0     CPU: 0:09:39.84
+ Case#   1, Flow Step    17500, dt = 0.100    , t =  1750.0     CPU: 0:09:42.36
+ Case#   1, Flow Step    17600, dt = 0.100    , t =  1760.0     CPU: 0:09:44.91
+ Case#   1, Flow Step    17700, dt = 0.100    , t =  1770.0     CPU: 0:09:47.47
+ Case#   1, Flow Step    17800, dt = 0.100    , t =  1780.0     CPU: 0:09:50.01
+ Case#   1, Flow Step    17900, dt = 0.100    , t =  1790.0     CPU: 0:09:52.57
+ Case#   1, Flow Step    18000, dt = 0.100    , t =  1800.0     CPU: 0:09:55.12
+    Cluster:         1 (Column 1)                              18000 substeps
+    Cluster:         2 (Column 1)                              18000 substeps
+  
+ *STATUS: ------------------ Summary of Case 1 ---------------------------------
+  
+  
+ INFO Number of flow time steps = 18000
+  
+ 
+ ----------------------------------------------------------------------------------
+ INFO ODE Integration Statistics - ODE Solution Cluster #  1
+ ----------------------------------------------------------------------------------
+ Number of ODEs                     =          3
+ Number of time steps               =      18049
+ Number of time step adjustments    =         13
+ # of time steps with TS adjustment =          2
+ Max. normalized integration error  = 0.00009836
+ Average time step                  = 0.09972852 s
+ ----------------------------------------------------------------------------------
+ 
+ INFO Top time step limiting ODEs, nodes and parts:    
+   #STEPS      % ODE# TYP NODE Part Name  Inside Part Named
+ ---------------------------------------------------------------------------------------------
+     18048 100%    3 d1     5 TransferFunction:EMotorFan!PIDController   On Map              
+ ======================================================================
+ INFO Approximate CPU breakdown by cluster
+ ======================================================================
+ Cluster Circuit Type      Name                       % CPU        min 
+ ----------------------------------------------------------------------
+       1       1  Flow     Flow 1 (Column 1)          67.80        6.69
+       2       2  Flow     Flow 2 (Column 1)          21.95        2.17
+       -       -  -        Thermal                     9.41        0.93
+       1       1  ODE/Mech ODE 1 (Column 1)            0.85        0.08
+       "       2  ODE/Mech ODE 2 (Column 1)             "
+       "       3  ODE/Mech Controls (Column 1)          "
+ ======================================================================
+  
+  CASE    COMPUTATIONS:  Elapsed Time: 10 Min: 16.54 Sec                       
+  FINAL   COMPUTATIONS:  Elapsed Time: 10 Min: 18.11 Sec                       
+  
+ Stopping the Run
+  
+ *STATUS: ------------------ END OF RUN 23-AUG-25 15:26:48 ---------------------
+  
+ Sat Aug 23 15:26:48 2025 Processing compounds from C:\Users\mobar\Desktop\Forschungsprojekt Auerbach\01_MP_KKL_Simu\02_GitHub\thermomanagement-formula-student-main\13_25er_1D-Model_Cooling-System-V2025_fanpfusch_compound.xml
+ Sat Aug 23 15:26:58 2025 C:\Users\mobar\Desktop\Forschungsprojekt Auerbach\01_MP_KKL_Simu\02_GitHub\thermomanagement-formula-student-main\13_25er_1D-Model_Cooling-System-V2025_fanpfusch.glx file GLX generated successfully. Size is 29.0439 MB.
