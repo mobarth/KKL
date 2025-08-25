@@ -1,0 +1,146 @@
+ *STATUS: ------------------ Start of Case 1 -----------------------------------
+
+  Case Number:        1 of  1
+  Case Setup Number:  13
+
+*ALERT:FlowPDropTableRef/Pressure_Drop_Cooling_Plate_25_V35
+      has static pressure drop entered but it's used at 2 locations
+      which have different upstream/downstream areas. This might lead
+      to wrong results. Please make a copy of this object and use it 
+      at the 2nd location.
+
+*ALERT:A FluidReservoir and/or Tank3D part(s) were detected in a flow circuit 
+      using the Implicit flow solver, but the attribute 'Alternate Implicit
+      Solver for Faster Convergence of Multi-Fluid Flows' in Advanced Setup ->
+      Flow is set to "off". Setting it to 'v2019' can help improve convergence
+      and reduce computation time.
+
+*WARN:The circuit "Flow 1 (Column 1)"
+      appears to be a closed, fixed-volume system.
+      Calculation of the absolute pressure is extremely dependent on
+      temperature for a liquid and may not be reliable.
+      Convergence difficulties may be encountered.
+
+ *STATUS: ------------------ Start of Time Stepping, Case 1 --------------------
+
+*WARN:Temp out of range for: h2o  T =  373.151
+    Step :  11925 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Suppressing additional warnings of this type for this timestep.
+
+*WARN:Temp out of range for: h2o  T =  373.151
+    Step :  11926 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Suppressing additional warnings of this type for this timestep.
+
+*WARN:Temp out of range for: h2o  T =  373.152
+    Step :  11927 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Suppressing additional warnings of this type for this timestep.
+
+*WARN:Temp out of range for: h2o  T =  373.151
+    Step :  11928 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Suppressing additional warnings of this type for this timestep.
+
+*WARN:Temp out of range for: h2o  T =  373.15
+    Step :  11929 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Suppressing additional warnings of this type for this timestep.
+
+*WARN:Temp out of range for: h2o  T =  373.151
+    Step :  11930 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Suppressing additional warnings of this type for this timestep.
+
+*WARN:Temp out of range for: h2o  T =  373.151
+    Step :  11931 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Suppressing additional warnings of this type for this timestep.
+
+*WARN:Temp out of range for: h2o  T =  373.152
+    Step :  11932 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Suppressing additional warnings of this type for this timestep.
+
+*WARN:Temp out of range for: h2o  T =  373.151
+    Step :  11933 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Suppressing additional warnings of this type for this timestep.
+
+*WARN:Temp out of range for: h2o  T =  373.151
+    Step :  11934 Part = Cooling_Jacket_Rear
+    Properties were evaluated at T =  373.15
+    Warn limit exceeded: Suppressing future warnings of this type for this case.
+ Case#   1, Flow Step    12000, dt = 0.100    , t =  1200.0     CPU: 0:08:40.43
+ Case#   1, Flow Step    12100, dt = 0.100    , t =  1210.0     CPU: 0:08:43.35
+ Case#   1, Flow Step    12200, dt = 0.100    , t =  1220.0     CPU: 0:08:45.68
+ Case#   1, Flow Step    12300, dt = 0.100    , t =  1230.0     CPU: 0:08:47.96
+ Case#   1, Flow Step    12400, dt = 0.100    , t =  1240.0     CPU: 0:08:50.25
+ Case#   1, Flow Step    12500, dt = 0.100    , t =  1250.0     CPU: 0:08:52.47
+ Case#   1, Flow Step    12600, dt = 0.100    , t =  1260.0     CPU: 0:08:54.75
+ Case#   1, Flow Step    12700, dt = 0.100    , t =  1270.0     CPU: 0:08:56.99
+ Case#   1, Flow Step    12800, dt = 0.100    , t =  1280.0     CPU: 0:08:59.28
+ Case#   1, Flow Step    12900, dt = 0.100    , t =  1290.0     CPU: 0:09:01.61
+ Case#   1, Flow Step    13000, dt = 0.100    , t =  1300.0     CPU: 0:09:03.92
+ Case#   1, Flow Step    13100, dt = 0.100    , t =  1310.0     CPU: 0:09:06.23
+ Case#   1, Flow Step    13200, dt = 0.100    , t =  1320.0     CPU: 0:09:08.49
+ Case#   1, Flow Step    13300, dt = 0.100    , t =  1330.0     CPU: 0:09:10.75
+ Case#   1, Flow Step    13400, dt = 0.100    , t =  1340.0     CPU: 0:09:13.04
+ Case#   1, Flow Step    13500, dt = 0.100    , t =  1350.0     CPU: 0:09:15.32
+ Case#   1, Flow Step    13600, dt = 0.100    , t =  1360.0     CPU: 0:09:17.61
+ Case#   1, Flow Step    13700, dt = 0.100    , t =  1370.0     CPU: 0:09:19.91
+ Case#   1, Flow Step    13800, dt = 0.100    , t =  1380.0     CPU: 0:09:22.26
+ Case#   1, Flow Step    13900, dt = 0.100    , t =  1390.0     CPU: 0:09:24.55
+ Case#   1, Flow Step    14000, dt = 0.100    , t =  1400.0     CPU: 0:09:26.79
+ Case#   1, Flow Step    14100, dt = 0.100    , t =  1410.0     CPU: 0:09:29.11
+ Case#   1, Flow Step    14200, dt = 0.100    , t =  1420.0     CPU: 0:09:31.41
+ Case#   1, Flow Step    14300, dt = 0.100    , t =  1430.0     CPU: 0:09:33.69
+ Case#   1, Flow Step    14400, dt = 0.100    , t =  1440.0     CPU: 0:09:35.98
+ Case#   1, Flow Step    14500, dt = 0.100    , t =  1450.0     CPU: 0:09:38.34
+ Case#   1, Flow Step    14600, dt = 0.100    , t =  1460.0     CPU: 0:09:40.67
+ Case#   1, Flow Step    14700, dt = 0.100    , t =  1470.0     CPU: 0:09:43.07
+ Case#   1, Flow Step    14800, dt = 0.100    , t =  1480.0     CPU: 0:09:45.35
+ Case#   1, Flow Step    14900, dt = 0.100    , t =  1490.0     CPU: 0:09:47.64
+ Case#   1, Flow Step    15000, dt = 0.100    , t =  1500.0     CPU: 0:09:49.94
+ Case#   1, Flow Step    15100, dt = 0.100    , t =  1510.0     CPU: 0:09:52.23
+ Case#   1, Flow Step    15200, dt = 0.100    , t =  1520.0     CPU: 0:09:54.55
+ Case#   1, Flow Step    15300, dt = 0.100    , t =  1530.0     CPU: 0:09:56.88
+ Case#   1, Flow Step    15400, dt = 0.100    , t =  1540.0     CPU: 0:09:59.48
+ Case#   1, Flow Step    15500, dt = 0.100    , t =  1550.0     CPU: 0:10:01.81
+ Case#   1, Flow Step    15600, dt = 0.100    , t =  1560.0     CPU: 0:10:04.12
+ Case#   1, Flow Step    15700, dt = 0.100    , t =  1570.0     CPU: 0:10:06.42
+ Case#   1, Flow Step    15800, dt = 0.100    , t =  1580.0     CPU: 0:10:08.70
+ Case#   1, Flow Step    15900, dt = 0.100    , t =  1590.0     CPU: 0:10:11.02
+ Case#   1, Flow Step    16000, dt = 0.100    , t =  1600.0     CPU: 0:10:13.32
+ Case#   1, Flow Step    16100, dt = 0.100    , t =  1610.0     CPU: 0:10:15.66
+ Case#   1, Flow Step    16200, dt = 0.100    , t =  1620.0     CPU: 0:10:17.97
+ Case#   1, Flow Step    16300, dt = 0.100    , t =  1630.0     CPU: 0:10:20.24
+ Case#   1, Flow Step    16400, dt = 0.100    , t =  1640.0     CPU: 0:10:22.48
+ Case#   1, Flow Step    16500, dt = 0.100    , t =  1650.0     CPU: 0:10:24.72
+ Case#   1, Flow Step    16600, dt = 0.100    , t =  1660.0     CPU: 0:10:27.00
+ Case#   1, Flow Step    16700, dt = 0.100    , t =  1670.0     CPU: 0:10:29.32
+ Case#   1, Flow Step    16800, dt = 0.100    , t =  1680.0     CPU: 0:10:31.61
+ Case#   1, Flow Step    16900, dt = 0.100    , t =  1690.0     CPU: 0:10:33.95
+ Case#   1, Flow Step    17000, dt = 0.100    , t =  1700.0     CPU: 0:10:36.24
+ Case#   1, Flow Step    17100, dt = 0.100    , t =  1710.0     CPU: 0:10:38.50
+ Case#   1, Flow Step    17200, dt = 0.100    , t =  1720.0     CPU: 0:10:40.75
+ Case#   1, Flow Step    17300, dt = 0.100    , t =  1730.0     CPU: 0:10:43.00
+ Case#   1, Flow Step    17400, dt = 0.100    , t =  1740.0     CPU: 0:10:45.25
+ Case#   1, Flow Step    17500, dt = 0.100    , t =  1750.0     CPU: 0:10:47.54
+ Case#   1, Flow Step    17600, dt = 0.100    , t =  1760.0     CPU: 0:10:49.84
+ Case#   1, Flow Step    17700, dt = 0.100    , t =  1770.0     CPU: 0:10:52.12
+ Case#   1, Flow Step    17800, dt = 0.100    , t =  1780.0     CPU: 0:10:54.37
+ Case#   1, Flow Step    17900, dt = 0.100    , t =  1790.0     CPU: 0:10:56.64
+ Case#   1, Flow Step    18000, dt = 0.100    , t =  1800.0     CPU: 0:10:58.90
+    Cluster:         1 (Column 1)                              18000 substeps
+    Cluster:         2 (Column 1)                              18000 substeps
+
+ *STATUS: ------------------ Summary of Case 1 ---------------------------------
+
+*WARN:Temperature out of range detected for species h2o.
+      Temperature as high as  416.274K > maximum valid 373.15K
+      (Detected a total of 12258995 times for 6076 timesteps.)
+
+ *STATUS: ------------------ END OF RUN 22-AUG-25 16:08:59 ---------------------
+

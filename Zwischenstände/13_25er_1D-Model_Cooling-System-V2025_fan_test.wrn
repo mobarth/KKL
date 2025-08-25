@@ -1,0 +1,200 @@
+ *STATUS: ------------------ Start of Case 1 -----------------------------------
+
+  Case Number:        1 of  1
+  Case Setup Number:  13
+
+*WARN:Detected 5 points which will be deleted from the performance curve.
+      There might be different reasons to delete these points:
+      1. Positive slope of flow rate vs pressure rise curve
+      2. Unrealistic slope of pressure vs flow coefficient curve (Speed Group)
+      3. A point on the performance curve which has a flow coefficient which is greater than
+         the flow coefficient at the milling point; or has a pressure coefficient which is
+         less than the pressure coefficient at the milling point
+      4. Point found below the milling curve
+
+*ALERT:FlowPDropTableRef/Pressure_Drop_Cooling_Plate_25_V35
+      has static pressure drop entered but it's used at 2 locations
+      which have different upstream/downstream areas. This might lead
+      to wrong results. Please make a copy of this object and use it 
+      at the 2nd location.
+
+*ALERT:A FluidReservoir and/or Tank3D part(s) were detected in a flow circuit 
+      using the Implicit flow solver, but the attribute 'Alternate Implicit
+      Solver for Faster Convergence of Multi-Fluid Flows' in Advanced Setup ->
+      Flow is set to "off". Setting it to 'v2019' can help improve convergence
+      and reduce computation time.
+
+*WARN:The circuit "Flow 1 (Column 1)"
+      appears to be a closed, fixed-volume system.
+      Calculation of the absolute pressure is extremely dependent on
+      temperature for a liquid and may not be reliable.
+      Convergence difficulties may be encountered.
+
+ *STATUS: ------------------ Start of Time Stepping, Case 1 --------------------
+
+*WARN:Implicit flow solver had minor non-convergence 
+      FlowCluster 2 (Column 1)   Timestep = 2
+      Time =    5.0000E-02 sec     Non-converged steps = 1    Level= OK
+ Case#   1, Flow Step       20, dt = 0.100    , t =  2.0000     CPU: 0:00:07.23
+ Case#   1, Flow Step       40, dt = 0.100    , t =  4.0000     CPU: 0:00:11.50
+ Case#   1, Flow Step       60, dt = 0.100    , t =  6.0000     CPU: 0:00:15.09
+ Case#   1, Flow Step       80, dt = 0.100    , t =  8.0000     CPU: 0:00:18.17
+ Case#   1, Flow Step      100, dt = 0.100    , t =  10.000     CPU: 0:00:21.06
+ Case#   1, Flow Step      200, dt = 0.100    , t =  20.000     CPU: 0:00:32.01
+ Case#   1, Flow Step      300, dt = 0.100    , t =  30.000     CPU: 0:00:42.91
+ Case#   1, Flow Step      400, dt = 0.100    , t =  40.000     CPU: 0:00:53.33
+ Case#   1, Flow Step      500, dt = 0.100    , t =  50.000     CPU: 0:01:03.67
+ Case#   1, Flow Step      600, dt = 0.100    , t =  60.000     CPU: 0:01:12.54
+ Case#   1, Flow Step      700, dt = 0.100    , t =  70.000     CPU: 0:01:20.38
+ Case#   1, Flow Step      800, dt = 0.100    , t =  80.000     CPU: 0:01:27.92
+ Case#   1, Flow Step      900, dt = 0.100    , t =  90.000     CPU: 0:01:34.54
+ Case#   1, Flow Step     1000, dt = 0.100    , t =  100.00     CPU: 0:01:42.18
+ Case#   1, Flow Step     1100, dt = 0.100    , t =  110.00     CPU: 0:01:50.36
+ Case#   1, Flow Step     1200, dt = 0.100    , t =  120.00     CPU: 0:01:57.27
+ Case#   1, Flow Step     1300, dt = 0.100    , t =  130.00     CPU: 0:02:04.28
+ Case#   1, Flow Step     1400, dt = 0.100    , t =  140.00     CPU: 0:02:10.15
+ Case#   1, Flow Step     1500, dt = 0.100    , t =  150.00     CPU: 0:02:17.76
+ Case#   1, Flow Step     1600, dt = 0.100    , t =  160.00     CPU: 0:02:26.89
+ Case#   1, Flow Step     1700, dt = 0.100    , t =  170.00     CPU: 0:02:33.66
+ Case#   1, Flow Step     1800, dt = 0.100    , t =  180.00     CPU: 0:02:41.34
+ Case#   1, Flow Step     1900, dt = 0.100    , t =  190.00     CPU: 0:02:49.16
+ Case#   1, Flow Step     2000, dt = 0.100    , t =  200.00     CPU: 0:02:57.39
+ Case#   1, Flow Step     2100, dt = 0.100    , t =  210.00     CPU: 0:03:04.30
+ Case#   1, Flow Step     2200, dt = 0.100    , t =  220.00     CPU: 0:03:09.98
+ Case#   1, Flow Step     2300, dt = 0.100    , t =  230.00     CPU: 0:03:17.96
+ Case#   1, Flow Step     2400, dt = 0.100    , t =  240.00     CPU: 0:03:25.38
+ Case#   1, Flow Step     2500, dt = 0.100    , t =  250.00     CPU: 0:03:32.23
+ Case#   1, Flow Step     2600, dt = 0.100    , t =  260.00     CPU: 0:03:40.49
+ Case#   1, Flow Step     2700, dt = 0.100    , t =  270.00     CPU: 0:03:48.34
+ Case#   1, Flow Step     2800, dt = 0.100    , t =  280.00     CPU: 0:03:55.02
+ Case#   1, Flow Step     2900, dt = 0.100    , t =  290.00     CPU: 0:04:01.35
+ Case#   1, Flow Step     3000, dt = 0.100    , t =  300.00     CPU: 0:04:08.10
+ Case#   1, Flow Step     3100, dt = 0.100    , t =  310.00     CPU: 0:04:16.24
+ Case#   1, Flow Step     3200, dt = 0.100    , t =  320.00     CPU: 0:04:23.57
+ Case#   1, Flow Step     3300, dt = 0.100    , t =  330.00     CPU: 0:04:30.46
+ Case#   1, Flow Step     3400, dt = 0.100    , t =  340.00     CPU: 0:04:38.90
+ Case#   1, Flow Step     3500, dt = 0.100    , t =  350.00     CPU: 0:04:46.32
+ Case#   1, Flow Step     3600, dt = 0.100    , t =  360.00     CPU: 0:04:53.05
+ Case#   1, Flow Step     3700, dt = 0.100    , t =  370.00     CPU: 0:04:59.21
+ Case#   1, Flow Step     3800, dt = 0.100    , t =  380.00     CPU: 0:05:06.17
+ Case#   1, Flow Step     3900, dt = 0.100    , t =  390.00     CPU: 0:05:14.42
+ Case#   1, Flow Step     4000, dt = 0.100    , t =  400.00     CPU: 0:05:23.91
+ Case#   1, Flow Step     4100, dt = 0.100    , t =  410.00     CPU: 0:05:30.96
+ Case#   1, Flow Step     4200, dt = 0.100    , t =  420.00     CPU: 0:05:39.11
+ Case#   1, Flow Step     4300, dt = 0.100    , t =  430.00     CPU: 0:05:46.53
+ Case#   1, Flow Step     4400, dt = 0.100    , t =  440.00     CPU: 0:05:53.32
+ Case#   1, Flow Step     4500, dt = 0.100    , t =  450.00     CPU: 0:05:59.21
+ Case#   1, Flow Step     4600, dt = 0.100    , t =  460.00     CPU: 0:06:06.88
+ Case#   1, Flow Step     4700, dt = 0.100    , t =  470.00     CPU: 0:06:14.50
+ Case#   1, Flow Step     4800, dt = 0.100    , t =  480.00     CPU: 0:06:21.63
+ Case#   1, Flow Step     4900, dt = 0.100    , t =  490.00     CPU: 0:06:29.10
+ Case#   1, Flow Step     5000, dt = 0.100    , t =  500.00     CPU: 0:06:36.74
+ Case#   1, Flow Step     5100, dt = 0.100    , t =  510.00     CPU: 0:06:43.67
+ Case#   1, Flow Step     5200, dt = 0.100    , t =  520.00     CPU: 0:06:51.10
+ Case#   1, Flow Step     5300, dt = 0.100    , t =  530.00     CPU: 0:06:56.72
+ Case#   1, Flow Step     5400, dt = 0.100    , t =  540.00     CPU: 0:07:04.56
+ Case#   1, Flow Step     5500, dt = 0.100    , t =  550.00     CPU: 0:07:12.12
+ Case#   1, Flow Step     5600, dt = 0.100    , t =  560.00     CPU: 0:07:19.28
+ Case#   1, Flow Step     5700, dt = 0.100    , t =  570.00     CPU: 0:07:27.20
+ Case#   1, Flow Step     5800, dt = 0.100    , t =  580.00     CPU: 0:07:34.93
+ Case#   1, Flow Step     5900, dt = 0.100    , t =  590.00     CPU: 0:07:41.19
+ Case#   1, Flow Step     6000, dt = 0.100    , t =  600.00     CPU: 0:07:47.73
+ Case#   1, Flow Step     6100, dt = 0.100    , t =  610.00     CPU: 0:07:54.34
+ Case#   1, Flow Step     6200, dt = 0.100    , t =  620.00     CPU: 0:08:02.38
+ Case#   1, Flow Step     6300, dt = 0.100    , t =  630.00     CPU: 0:08:09.54
+ Case#   1, Flow Step     6400, dt = 0.100    , t =  640.00     CPU: 0:08:16.37
+ Case#   1, Flow Step     6500, dt = 0.100    , t =  650.00     CPU: 0:08:24.97
+ Case#   1, Flow Step     6600, dt = 0.100    , t =  660.00     CPU: 0:08:32.35
+ Case#   1, Flow Step     6700, dt = 0.100    , t =  670.00     CPU: 0:08:39.00
+ Case#   1, Flow Step     6800, dt = 0.100    , t =  680.00     CPU: 0:08:44.91
+ Case#   1, Flow Step     6900, dt = 0.100    , t =  690.00     CPU: 0:08:51.62
+ Case#   1, Flow Step     7000, dt = 0.100    , t =  700.00     CPU: 0:09:00.01
+ Case#   1, Flow Step     7100, dt = 0.100    , t =  710.00     CPU: 0:09:06.84
+ Case#   1, Flow Step     7200, dt = 0.100    , t =  720.00     CPU: 0:09:13.49
+ Case#   1, Flow Step     7300, dt = 0.100    , t =  730.00     CPU: 0:09:21.73
+ Case#   1, Flow Step     7400, dt = 0.100    , t =  740.00     CPU: 0:09:29.01
+ Case#   1, Flow Step     7500, dt = 0.100    , t =  750.00     CPU: 0:09:35.76
+ Case#   1, Flow Step     7600, dt = 0.100    , t =  760.00     CPU: 0:09:41.88
+ Case#   1, Flow Step     7700, dt = 0.100    , t =  770.00     CPU: 0:09:49.89
+ Case#   1, Flow Step     7800, dt = 0.100    , t =  780.00     CPU: 0:09:57.96
+ Case#   1, Flow Step     7900, dt = 0.100    , t =  790.00     CPU: 0:10:05.79
+ Case#   1, Flow Step     8000, dt = 0.100    , t =  800.00     CPU: 0:10:14.45
+ Case#   1, Flow Step     8100, dt = 0.100    , t =  810.00     CPU: 0:10:22.49
+ Case#   1, Flow Step     8200, dt = 0.100    , t =  820.00     CPU: 0:10:28.68
+ Case#   1, Flow Step     8300, dt = 0.100    , t =  830.00     CPU: 0:10:34.58
+ Case#   1, Flow Step     8400, dt = 0.100    , t =  840.00     CPU: 0:10:40.49
+ Case#   1, Flow Step     8500, dt = 0.100    , t =  850.00     CPU: 0:10:45.98
+ Case#   1, Flow Step     8600, dt = 0.100    , t =  860.00     CPU: 0:10:50.89
+ Case#   1, Flow Step     8700, dt = 0.100    , t =  870.00     CPU: 0:10:55.53
+ Case#   1, Flow Step     8800, dt = 0.100    , t =  880.00     CPU: 0:10:59.93
+ Case#   1, Flow Step     8900, dt = 0.100    , t =  890.00     CPU: 0:11:04.36
+ Case#   1, Flow Step     9000, dt = 0.100    , t =  900.00     CPU: 0:11:08.56
+ Case#   1, Flow Step     9100, dt = 0.100    , t =  910.00     CPU: 0:11:12.29
+ Case#   1, Flow Step     9200, dt = 0.100    , t =  920.00     CPU: 0:11:15.96
+ Case#   1, Flow Step     9300, dt = 0.100    , t =  930.00     CPU: 0:11:19.60
+ Case#   1, Flow Step     9400, dt = 0.100    , t =  940.00     CPU: 0:11:23.27
+ Case#   1, Flow Step     9500, dt = 0.100    , t =  950.00     CPU: 0:11:26.93
+ Case#   1, Flow Step     9600, dt = 0.100    , t =  960.00     CPU: 0:11:31.58
+ Case#   1, Flow Step     9700, dt = 0.100    , t =  970.00     CPU: 0:11:39.29
+ Case#   1, Flow Step     9800, dt = 0.100    , t =  980.00     CPU: 0:11:47.29
+ Case#   1, Flow Step     9900, dt = 0.100    , t =  990.00     CPU: 0:11:55.03
+ Case#   1, Flow Step    10000, dt = 0.100    , t =  1000.0     CPU: 0:12:02.49
+ Case#   1, Flow Step    10100, dt = 0.100    , t =  1010.0     CPU: 0:12:09.66
+ Case#   1, Flow Step    10200, dt = 0.100    , t =  1020.0     CPU: 0:12:15.51
+ Case#   1, Flow Step    10300, dt = 0.100    , t =  1030.0     CPU: 0:12:23.07
+ Case#   1, Flow Step    10400, dt = 0.100    , t =  1040.0     CPU: 0:12:30.75
+ Case#   1, Flow Step    10500, dt = 0.100    , t =  1050.0     CPU: 0:12:37.90
+ Case#   1, Flow Step    10600, dt = 0.100    , t =  1060.0     CPU: 0:12:45.64
+ Case#   1, Flow Step    10700, dt = 0.100    , t =  1070.0     CPU: 0:12:53.93
+ Case#   1, Flow Step    10800, dt = 0.100    , t =  1080.0     CPU: 0:13:02.15
+ Case#   1, Flow Step    10900, dt = 0.100    , t =  1090.0     CPU: 0:13:08.80
+ Case#   1, Flow Step    11000, dt = 0.100    , t =  1100.0     CPU: 0:13:15.48
+ Case#   1, Flow Step    11100, dt = 0.100    , t =  1110.0     CPU: 0:13:23.48
+ Case#   1, Flow Step    11200, dt = 0.100    , t =  1120.0     CPU: 0:13:30.96
+ Case#   1, Flow Step    11300, dt = 0.100    , t =  1130.0     CPU: 0:13:37.98
+ Case#   1, Flow Step    11400, dt = 0.100    , t =  1140.0     CPU: 0:13:46.38
+ Case#   1, Flow Step    11500, dt = 0.100    , t =  1150.0     CPU: 0:13:53.83
+ Case#   1, Flow Step    11600, dt = 0.100    , t =  1160.0     CPU: 0:14:00.90
+ Case#   1, Flow Step    11700, dt = 0.100    , t =  1170.0     CPU: 0:14:07.13
+ Case#   1, Flow Step    11800, dt = 0.100    , t =  1180.0     CPU: 0:14:13.70
+ Case#   1, Flow Step    11900, dt = 0.100    , t =  1190.0     CPU: 0:14:22.09
+ Case#   1, Flow Step    12000, dt = 0.100    , t =  1200.0     CPU: 0:14:29.20
+ Case#   1, Flow Step    12100, dt = 0.100    , t =  1210.0     CPU: 0:14:35.97
+ Case#   1, Flow Step    12200, dt = 0.100    , t =  1220.0     CPU: 0:14:44.37
+ Case#   1, Flow Step    12300, dt = 0.100    , t =  1230.0     CPU: 0:14:51.64
+ Case#   1, Flow Step    12400, dt = 0.100    , t =  1240.0     CPU: 0:14:58.57
+ Case#   1, Flow Step    12500, dt = 0.100    , t =  1250.0     CPU: 0:15:04.65
+ Case#   1, Flow Step    12600, dt = 0.100    , t =  1260.0     CPU: 0:15:11.65
+ Case#   1, Flow Step    12700, dt = 0.100    , t =  1270.0     CPU: 0:15:19.79
+ Case#   1, Flow Step    12800, dt = 0.100    , t =  1280.0     CPU: 0:15:26.39
+ Case#   1, Flow Step    12900, dt = 0.100    , t =  1290.0     CPU: 0:15:34.05
+ Case#   1, Flow Step    13000, dt = 0.100    , t =  1300.0     CPU: 0:15:42.36
+ Case#   1, Flow Step    13100, dt = 0.100    , t =  1310.0     CPU: 0:15:49.37
+ Case#   1, Flow Step    13200, dt = 0.100    , t =  1320.0     CPU: 0:15:56.62
+ Case#   1, Flow Step    13300, dt = 0.100    , t =  1330.0     CPU: 0:16:02.39
+ Case#   1, Flow Step    13400, dt = 0.100    , t =  1340.0     CPU: 0:16:12.35
+ Case#   1, Flow Step    13500, dt = 0.100    , t =  1350.0     CPU: 0:16:21.17
+ Case#   1, Flow Step    13600, dt = 0.100    , t =  1360.0     CPU: 0:16:28.43
+ Case#   1, Flow Step    13700, dt = 0.100    , t =  1370.0     CPU: 0:16:36.49
+ Case#   1, Flow Step    13800, dt = 0.100    , t =  1380.0     CPU: 0:16:45.38
+ Case#   1, Flow Step    13900, dt = 0.100    , t =  1390.0     CPU: 0:16:52.79
+ Case#   1, Flow Step    14000, dt = 0.100    , t =  1400.0     CPU: 0:16:59.40
+ LICENSE LOST OR NOT AVAILABLE
+The requested license is not currently active. This could happen because 
+a connection to the license server has been lost due to network problems or if 
+the license administrator removed the license checked out by your application.
+
+*WARN:License has been lost or a paused job is being resumed and no
+      licenses can be checked out. Simulation will remain suspended until a
+      license can be checked out. The solver will attempt to check out a
+      license every five seconds, but this message will only be written once
+      every hour.
+
+ *STATUS: ------------------ Summary of Case 1 ---------------------------------
+
+*WARN:Implicit flow solver did not converge for the following clusters:
+      Cluster 2 (Column 1)
+        Non-converged steps:   OK = 1  Weak = 0  Strong = 0
+
+ *STATUS: ------------------ END OF RUN 14-AUG-25 14:08:03 ---------------------
+
