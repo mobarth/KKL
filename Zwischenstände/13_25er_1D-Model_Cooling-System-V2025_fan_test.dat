@@ -1,9 +1,9 @@
 |* GTSUITE [Version 2025.1.32544]
 |===DATA FILE for GTSUITE [Version 2025.1]=====================================
-| LOCDIR:  C:\Users\mobar\Desktop\Forschungsprojekt Auerbach\01_MP_KKL_Simu\02_GitHub\thermomanagement-formula-student-main
+| LOCDIR:  C:\Users\Tobias\OneDrive\Dokumente\GitHub\KKL\Zwischenstände
 | PROJECT: 13_25er_1D-Model_Cooling-System-V2025_fan_test.sim : GTSUITE
-| DATE:    Thu, Aug 14, 2025
-| TIME:    13:45:18
+| DATE:    Mon, Aug 25, 2025
+| TIME:    15:18:23
 | ENCODING: Cp1252(1252)
 | CREATOR: GTSUITE [Version 2025.1]
 | GT-ISE Build: 1.0001  gtt Build: 1.0000
@@ -127,6 +127,8 @@ PlotPoints --------------------------------------------------------------------
   1500 Automatic Automatic Timestep 1.0 use_nearest_volume off 36 1
 PlotData ----------------------------------------------------------------------
 |PART# PLOT {XLOC} PLPNT PL_RANGE XAXIS_TYPE SAMPL_TYPE SAMPL_INTERVAL
+65689 OUTP {1} def def def def def
+65689 INPT {1} def def def def def
 65676 effmapc def def ign def def
 65676 pr def def def def def
 65676 spdmapc def def ign def def
@@ -140,17 +142,15 @@ PlotData ----------------------------------------------------------------------
 65558 CONS def def def def def
 65558 FORC def def def def def
 65558 POWR def def def def def
-65682 PERF def def def def def
+65685 RPM def def def def def
+65685 POWER def def def def def
+65688 PERF def def def def def
 65557 POWR def def def def def
 65557 TRQO def def def def def
 65557 DISPL def def def def def
 65557 RPM def def def def def
-65679 RPM def def def def def
-65679 POWER def def def def def
 65541 power def def def def def
 65541 pwrcoeff def def def def def
-65683 OUTP {1} def def def def def
-65683 INPT {1} def def def def def
 ObjectPlotData ----------------------------------------------------------------
 FlowPDropTableRef Pressure_Drop_Cooling_Plate_25_V35 O_PLOT_1
 FlowPDropTableRef Pressure_Drop_Cooling_Plate_25_V35 O_PLOT_2
@@ -409,8 +409,9 @@ Setup General_D O_DTPLOT_2
 |===OBJECT AND PART COUNT======================================================
 ObjectPartCount ---------------------------------------------------------------
 |TEMPLATE OBJECTS PARTS RLTS MAXINPUT MAXOUTPUT
-ActuatorConn 1 1 
-BoundaryPressure 2 2 
+ActuatorConn 1 2 
+BoundaryFlow 1 1 
+BoundaryPressure 1 1 
 ConvectionConn 2 4 
 DiffEqControl 1 0 
 Fan 1 1 
@@ -422,12 +423,13 @@ FluidGas 2 0
 FluidInitialState 3 0 
 FluidLiqCompressible 1 0 
 FluidReservoir 1 1 
+Gain 1 1 1 1 
 HeatRate 4 4 
 HxSpecsTubeFin 3 0 
 HxTubeFinMain 1 1 
 HxTubeFinSecondary 1 1 
 IfThenElse 1 1 1 1 
-Lookup1D 1 1 1 1 
+Lookup1D 2 2 1 1 
 MaterialThermalProp 1 0 
 MotorGeneratorMap 1 1 
 OrificeConn 1 22 
@@ -445,7 +447,7 @@ ResistanceConn 4 4
 RigidConn 1 1 
 SensorConn 1 1 
 Shaft 1 1 
-SignalGenerator 1 1 0 1 
+SignalGenerator 2 2 0 1 
 SpeedBoundaryConn 1 1 
 SpeedBoundaryRot 1 1 
 ThermalConn 1 4 
@@ -453,7 +455,7 @@ ThermalMass 4 8
 XYTable 4 0 
 PhantomConn 1 2 0
 PhantomControlConn 1 1 0
-UnitControlConn 1 2 0
+UnitControlConn 1 4 0
 NameValuePairs ----------------------------------------------------------------
 CASE_SETUP_CASE_ON=1   | Number of cases turned on in Case Setup
 DOE_CASE_ON=0   | Number of DOE cases (experiments) to be run
@@ -466,7 +468,7 @@ NCTMXCYL=0
 NGEARMAX=0
 AXZONE=0
 NSENSORS=2
-NACTUATORS=1
+NACTUATORS=2
 NMULTLRDNN=0
 NMAXCHAINLINKS=0
 NMAXCHAINLINKSSI=0
@@ -489,7 +491,7 @@ NPIPE3DPART=0
 NLOCMAX=400
 NEQMXODEQ=0
 NINMXODEQ=0
-LASTPARTID=65693
+LASTPARTID=65701
 MXPIPETABLE=23
 NTWALSOLNPARTS=0
 NINPSIMUHARN=0
@@ -523,7 +525,7 @@ ORIGINALBUILD=2
 ORIGINALVER=2024
 GTIDEBUG=4
 GTSTORE_CHECK=0
-SIM_ID=17091b96-f100-445c-ade8-c1e82c44ac88
+SIM_ID=e32f9d39-9611-430d-8285-9e18ce14ff5c
 |===REFERENCE OBJECTS==========================================================
 DiffEqControl -----------------------------------------------------------------
 |NAME INTTYPE MATXNORDOPT MATXSPRSOLV MATXINVSCHM EULDTMXODE EULIMXITS EULTSRLX EULRELACC EULDNORM EULVNORM EULRDAN EULRVACCN EULHPACCN EULACCEM EULVNORMEM EULINORMEM EULLNORMEM EULFNORMEM RKDTMXODE RKIMXITS RKTSRLX RKRELACC RKDNORM RKVNORM RKRDAN RKRVACCN RKHPACCN RKACCEM RKVNORMEM RKINORMEM RKLNORMEM RKFNORMEM APDTMXODE APIMXITS APTSRLX APMAXORD APRELACC APABSACC APDNORM APVNORM APRDAN APRVACCN APHPACCN APACCEM APVNORMEM APINORMEM APLNORMEM APFNORMEM TRAPDTMXODE TRAPIMXITS TRAPTSRLX TRAPRELTOL TRAPABSTOL TRAPCRIJAC TRAPCRINTN TRAPMAXITR HHTDTMXODE HHTIMXITS HHTTSRLX HHTRELTOL HHTABSTOL HHTALPHA HHTCRIJAC HHTCRINTN HHTMAXITR RAD2DTMXODE RAD2IMXITS RAD2TSRLX RAD2RELTOL RAD2ABSTOL RAD2CRIJAC RAD2CRINTN RAD2MAXITR RAD3DTMXODE RAD3IMXITS RAD3TSRLX RAD3RELTOL RAD3ABSTOL RAD3CRIJAC RAD3CRINTN RAD3MAXITR SDCDTMXODE SDCIMXITS SDCTSRLX SDCRELTOL SDCABSTOL SDCCRIJAC SDCCRINTN SDCMAXITR DAEHHTDTMXODE DAEHHTIMXITS DAEHHTTSRLX DAEHHTRELTOL DAEHHTABSTOL DAEHHTALPHA DAEHHTCRIJAC DAEHHTCRINTN DAEHHTMAXITR DAEGADTMXODE DAEGAIMXITS DAEGATSRLX DAEGARELTOL DAEGAALROH DAEGACRIJAC DAEGACRINTN DAEGAMAXITR DAEGAFORODE1 DAEGARHOODE1 STAANLOPT STADTMXODE STASOLTYP STARELTOL STAABSTOL STAFRCSTPTYP STANFRCSTP STAILMTERMS 
@@ -2815,12 +2817,12 @@ RLTScoreL:5> vehispd engrpm output1 output2 output3 <
 RLTStoragePartList ------------------------------------------------------------
 |NAME RLTPARTLIST 
  $ Reduced_RLT_Exception_List
-RLTPARTLIST:48> FlowCombine-1 FlowSplit_To_Expansion_Tank-1 Heat_Input_Front_Motor Heat_Input_Inverter_Front Heat_Input_Inverter_Rear Heat_Input_Rear_Motor Entlueftung_1 Entlueftung_2 RL_Kuehler RL_Motor_F1 RL_Motor_R1 RL_Motor_R2 VL_Inverter VL_Kuehler VL_Motor_F1 VL_Motor_F2 VL_Motor_R Convective_Heat_Transfer_Cooling_Jacket Convective_Heat_Transfer_Cooling_Jacket-1 Convective_Heat_Transfer_Cooling_Plate-1 Convective_Heat_Transfer_Cooling_Plate-2 2 3 4 5 6 8 9 14 15 16 17 18 19 20 21 22 23 24 25 Resistance_Motor_to_Cooling_Jacket-1 Resistance_Motor_to_Cooling_Jacket_Front Resistance_TIM_Front Resistance_TIM_Rear 10 11 12 13 <
+RLTPARTLIST:48> FlowCombine-1 FlowSplit_To_Expansion_Tank-1 Heat_Input_Front_Motor Heat_Input_Inverter_Front Heat_Input_Inverter_Rear Heat_Input_Rear_Motor Entlueftung_1 Entlueftung_2 RL_Kuehler RL_Motor_F1 RL_Motor_R1 RL_Motor_R2 VL_Inverter VL_Kuehler VL_Motor_F1 VL_Motor_F2 VL_Motor_R Convective_Heat_Transfer_Cooling_Jacket Convective_Heat_Transfer_Cooling_Jacket-1 Convective_Heat_Transfer_Cooling_Plate-1 Convective_Heat_Transfer_Cooling_Plate-2 2 EMotorFan!3 4 5 6 8 9 14 15 16 17 18 19 20 21 22 23 24 25 Resistance_Motor_to_Cooling_Jacket-1 Resistance_Motor_to_Cooling_Jacket_Front Resistance_TIM_Front Resistance_TIM_Rear 10 11 12 13 <
 XYTable -----------------------------------------------------------------------
 |NAME EXPLICIT REF_FILE REF_FILE_USER1 REF_FILE_USER2 USER1 USER2 TYPE XSHFT XMULT YSHFT YMULT ILKPTYP SMOOTH JPLTPROF ISTRIP YTOLER YFRAC YMIN YMAX 
  $ Air_Mass_Flow_over_VVelocity_Stallardo25 on ign ign ign
 USER1:6:NUM> 2.78 8.33 13.89 19.44 25.0 33.33 <
-USER2:6:NUM> 73.72 82.0 87.38 89.73 93.18 99.67 <
+USER2:6:NUM> 3.0 11.28 16.66 19.01 22.46 28.95 <
  endpoints def def def def interpolate-linear ign off none ign ign ign ign
 |# 1022912|
 |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2842,14 +2844,14 @@ USER2:7:NUM> 0.0 600.0 1000.0 2000.0 3600.0 3600.0 0.0 <
  endpoints def def def def interpolate-linear ign off none ign ign ign ign
 |# 1022912|
 |===COMPONENT OBJECTS==========================================================
+BoundaryFlow ------------------------------------------------------------------
+|NAME FLOW DOWNST INPRES INDENS MASS VELO MFLX TEMP COMP INIT RELHUM JRH_ALLGAS7 HUMIDPROP ICRH REFP REFT MASS_TYPE 
+ $ BoundaryFlow ign ign ign ign '[Fallback_Massflow_air:.001&0]' ign ign '[Main__Temperature_air:1&273.15]' air2 off
+ ign "fresh air only" ign on ign ign wet
+|# 41|964067|
 BoundaryPressure --------------------------------------------------------------
 |NAME PRES TEMP COMPOS P_TYPE TRACK ALT REFALT ALTOPT RELHUM JRH_ALLGAS5 HUMIDPROP ICRH REFP REFT 
- $ Air-in '[Fan-P-inlet]' '[Fan-T-inlet]' air2
- inlet-static imposed
- ign ign ign ign "fresh air only" ign on ign ign
-|# 964045|
-|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- $ Air-out '[Fan-P-outlet]' 300 air2
+ $ Air-out '[Backpressure_air]' '[Main__Temperature_air:1&273.15]' air2
  standard(total) imposed
  ign ign ign ign "fresh air only" ign on ign ign
 |# 964045|
@@ -2888,6 +2890,15 @@ VOL:1> ign <
 % Input 0.8 ign 90.0 
 % Output 0.1 ign 90.0 
 |# 985964|966070|966076|966066|1041377|
+Gain --------------------------------------------------------------------------
+|NAME GAIN INLABEL INMAPLABEL XUNIT OUTLABEL OUTMAPLABEL YUNIT 
+ $ Gain '[Main__air_massflow_factor]'
+INLABEL:1> "Input 1" <
+INMAPLABEL:1> def <
+XUNIT:1:NUM> 80 <
+OUTLABEL:1> "Output 1" <
+OUTMAPLABEL:1> def <
+YUNIT:1:NUM> 80 <
 HeatRate ----------------------------------------------------------------------
 |NAME RATE 
  $ Heat_Input_Front_Inverter '[Inverter__Heat_Rate_Profile_Front]'
@@ -2973,6 +2984,12 @@ OUTMAPLABEL:1> def <
 YUNIT:1:NUM> 115 <
 Lookup1D ----------------------------------------------------------------------
 |NAME NAMXYT XUNIT INLABEL INMAPLABEL OUTLABEL OUTMAPLABEL 
+ $ Lookup1D '[Air_Massflow_over_VVelocity_Specification_Object]' ign
+INLABEL:1> "Vehicle Velocity" <
+INMAPLABEL:1> def <
+OUTLABEL:1> "Air mass flow" <
+OUTMAPLABEL:1> def <
+|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  $ SpeedLookup DutyCycle:1&0 ign
 INLABEL:1> "Input Signal" <
 INMAPLABEL:1> def <
@@ -3270,6 +3287,9 @@ SignalGenerator ---------------------------------------------------------------
 |NAME SGNLTYPE NAMXYT EQUATION ERRORFLAG OUTLABEL OUTMAPLBL 
  $ InputSignal constant_or_reference '[Fan_Input_Signal]' ign error_message
  Output def
+|++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ $ SignalGenerator constant_or_reference '[Main__Vehicle_Velocity_Specification_Object]' ign error_message
+ "Vehicle Velocity" def
 SpeedBoundaryRot --------------------------------------------------------------
 |NAME RPM0 POS0 CYCDEG 
  $ SpeedBoundaryRot '[Pump_RPM]' 0
@@ -3337,11 +3357,12 @@ CircuitsList ------------------------------------------------------------------
 8 Thermal
 9 Thermal
 10 Control
+11 Control
 |===PARTS MAP==================================================================
 PartsList ---------------------------------------------------------------------
 |PART# GEODATA TEMPLATE OBJECT NAME CIRCUITS OVERRIDES
-65675 092025004004 BoundaryPressure Air-in Air-In-03 {2}
 65670 104042004004 BoundaryPressure Air-out Air-Out-03 {2}
+65680 093024004004 BoundaryFlow BoundaryFlow Air_inlet_flow {2}
 65576 045062004004 PipeRound Cooling_Jacket Cooling_Jacket_Front {3}
 65582 045020004004 PipeRound Cooling_Jacket Cooling_Jacket_Rear {3}
 65596 082011004004 PipeRound Cooling_Plate Cooling_Plate_Front {3}
@@ -3354,14 +3375,16 @@ PartsList ---------------------------------------------------------------------
 65671 101042004004 PipeRound Fan_Flow Fan-Out-03 {2}
 65658 045050004004 FlowSplitTRight FlowCombine FlowCombine-1 {3}
 65654 045032004004 FlowSplitTRight FlowSplit_To_Expansion_Tank FlowSplit_To_Expansion_Tank-1 {3}
+65683 100024004004 Gain Gain Gain-1 {11}
 65571 020062004004 HeatRate HeatRate Heat_Input_Front_Motor {7}
 65597 057011004004 HeatRate Heat_Input_Front_Inverter Heat_Input_Inverter_Front {8}
 65598 057003004004 HeatRate Heat_Input_Inverter_Rear Heat_Input_Inverter_Rear {9}
 65585 020020004004 HeatRate HeatRate-1 Heat_Input_Rear_Motor {6}
 65537 083033023033 HxTubeFinMain AKG_HX HX_Main {1 3}
 65538 093033023033 HxTubeFinSecondary HxTubeFinSecondary Hx_Secondary {1 2}
-65684 033017004004 IfThenElse IfThenElse-1 EMotorFan!IfThenElse-1 {10}
+65690 033017004004 IfThenElse IfThenElse-1 EMotorFan!IfThenElse-1 {10}
 65668 103048004004 SignalGenerator InputSignal InputSignal {10}
+65684 103024004004 Lookup1D Lookup1D Lookup1D-1 {11}
 65573 036061013013 ThermalMass ThermalMass-1 Mass_Cooling_Jacket {7}
 65580 036020013013 ThermalMass ThermalMass-1 Mass_Cooling_Jacket-1 {6}
 65609 075011013013 ThermalMass Mass_Cooling_Plate Mass_Cooling_Plate_Front {8}
@@ -3370,16 +3393,17 @@ PartsList ---------------------------------------------------------------------
 65584 028020013013 ThermalMass ThermalMass Mass_Motor_Rear {6}
 65599 065011013013 ThermalMass Mass_Powermodule_Front Mass_Powermodule_Front {8}
 65600 065003013013 ThermalMass Mass_Powermodule_Front Mass_Powermodule_Rear {9}
-65679 024022013012 MotorGeneratorMap MotorGeneratorMap EMotorFan!MotorGeneratorMap {4}
-65682 031022019004 PIDController PIDController EMotorFan!PIDController {10}
+65685 024022013012 MotorGeneratorMap MotorGeneratorMap EMotorFan!MotorGeneratorMap {4}
+65688 031022019004 PIDController PIDController EMotorFan!PIDController {10}
 65541 082048013013 Pump Pump Pump-1 {3 5}
 65644 082025004004 PipeTable RL_Kuehler RL_Kuehler {3}
 65643 082063004004 PipeTable RL_Motor_F1 RL_Motor_F1 {3}
 65621 045026004004 PipeTable RL_Motor_R1 RL_Motor_R1 {3}
 65642 045038004004 PipeTable RL_Motor_R2 RL_Motor_R2 {3}
-65685 024017004004 Shaft Shaft EMotorFan!Shaft-1 {4}
+65691 024017004004 Shaft Shaft EMotorFan!Shaft-1 {4}
+65682 106024004004 SignalGenerator SignalGenerator SignalGenerator-1 {11}
 65557 078048013013 SpeedBoundaryRot SpeedBoundaryRot SpeedBoundaryRot-1 {5}
-65683 039022004004 Lookup1D SpeedLookup EMotorFan!SpeedLookup {10}
+65689 039022004004 Lookup1D SpeedLookup EMotorFan!SpeedLookup {10}
 65623 082019004004 PipeTable VL_Inverter VL_Inverter {3}
 65640 082041004004 PipeTable VL_Kuehler VL_Kuehler {3}
 65630 045045004004 PipeTable VL_Motor_F1 VL_Motor_F1 {3}
@@ -3387,12 +3411,12 @@ PartsList ---------------------------------------------------------------------
 65631 045014004004 PipeTable VL_Motor_R VL_Motor_R {3}
 SystemMap ---------------------------------------------------------------------
 |PART# GEODATA TEMPLATE OBJECT CMP1 CMP2 NAME CIRCUITS OVERRIDES
+65681 096024004004 ActuatorConn def 65683.1 65680.3 1 {11} unitDef1=80 unitUsr1=80 unitDef2=79 unitUsr2=80
 65645 082038002002 OrificeConn def 65640.2 65537.1 2 {3}
-65550 092028002002 OrificeConn def 65675.1 65538.1 3 {2}
-65681 030017004004 SensorConn def 65685.1 65682.1 EMotorFan!3 {10} YINIT=def unitDef1=139 unitUsr1=139 unitDef2=139 unitUsr2=139
-65681 030017004004 SensorConn def 65685.1 65684.1 EMotorFan!3 {10} YINIT=def unitDef1=139 unitUsr1=139 unitDef2=139 unitUsr2=139
+65687 030017004004 SensorConn def 65691.1 65688.1 EMotorFan!3 {10} YINIT=def unitDef1=139 unitUsr1=139 unitDef2=139 unitUsr2=139
+65687 030017004004 SensorConn def 65691.1 65690.1 EMotorFan!3 {10} YINIT=def unitDef1=139 unitUsr1=139 unitDef2=139 unitUsr2=139
 65551 093038002002 OrificeConn def 65538.2 65678.1 4 {2}
-65680 027022004004 ActuatorConn def 65682.1 65679.5 EMotorFan!4 {10} unitDef1=115 unitUsr1=115 unitDef2=115 unitUsr2=115
+65686 027022004004 ActuatorConn def 65688.1 65685.5 EMotorFan!4 {10} unitDef1=115 unitUsr1=115 unitDef2=115 unitUsr2=115
 65561 082044002002 OrificeConn def 65541.0 65640.1 5 {3}
 65646 082028002002 OrificeConn def 65537.2 65644.1 6 {3}
 65558 080048002002 SpeedBoundaryConn def 65557.0 65541.1 7 {5}
@@ -3415,10 +3439,11 @@ SystemMap ---------------------------------------------------------------------
 65659 045047002002 OrificeConn def 65630.2 65658.1 23 {3}
 65660 045052002002 OrificeConn def 65658.2 65628.1 24 {3}
 65661 036050002002 OrificeConn def 65635.2 65658.3 25 {3}
+65679 093027002002 OrificeConn def 65680.1 65538.1 26 {2}
 65673 095042002002 OrificeConn def 65678.2 65676.1 27 {2}
 65672 099042002002 OrificeConn def 65676.0 65671.1 28 {2}
 65677 102042002002 OrificeConn def 65671.2 65670.1 29 {2}
-65669 097044002002 RigidConn def 65685.1 65676.1 36 {4}
+65669 097044002002 RigidConn def 65691.1 65676.1 36 {4}
 65577 041062004004 ConvectionConn ConvectionConn 65573.1 65576.0 Convective_Heat_Transfer_Cooling_Jacket {0}
 65583 041020004004 ConvectionConn ConvectionConn 65580.1 65582.0 Convective_Heat_Transfer_Cooling_Jacket-1 {0}
 65612 078003004004 ConvectionConn Convective_Heat_Transfer_Cooling_Plate 65608.1 65601.0 Convective_Heat_Transfer_Cooling_Plate-1 {0}
@@ -3431,11 +3456,13 @@ SystemMap ---------------------------------------------------------------------
 65605 032062004004 ResistanceConn ResistanceConn 65569.1 65573.1 Resistance_Motor_to_Cooling_Jacket_Front {7}
 65604 070011004004 ResistanceConn Resistance_TIM_Front 65599.1 65609.1 Resistance_TIM_Front {8}
 65602 070003004004 ResistanceConn Resistance_TIM_Rear 65600.1 65608.1 Resistance_TIM_Rear {9}
-65689 001001001001 PhantomConn def 65537.0 65538.0 65689 {1} 
-65690 001001001001 PhantomConn def 65679.1 65685.1 65690 {4} 
-65691 001001001001 UnitControlConn def 65683.1 65682.2 65691 {10} unitDef1=139 unitUsr1=139 unitDef2=139 unitUsr2=139
-65692 001001001001 UnitControlConn def 65684.1 65682.4 65692 {10} unitDef1=115 unitUsr1=115 unitDef2=115 unitUsr2=115
-65693 001001001001 PhantomControlConn def 65668.1 65683.1 65693 {10} 
+65695 001001001001 PhantomConn def 65537.0 65538.0 65695 {1} 
+65696 001001001001 PhantomConn def 65685.1 65691.1 65696 {4} 
+65697 001001001001 UnitControlConn def 65682.1 65684.1 65697 {11} unitDef1=41 unitUsr1=41 unitDef2=0 unitUsr2=0
+65698 001001001001 UnitControlConn def 65684.1 65683.1 65698 {11} unitDef1=80 unitUsr1=80 unitDef2=80 unitUsr2=80
+65699 001001001001 UnitControlConn def 65689.1 65688.2 65699 {10} unitDef1=139 unitUsr1=139 unitDef2=139 unitUsr2=139
+65700 001001001001 UnitControlConn def 65690.1 65688.4 65700 {10} unitDef1=115 unitUsr1=115 unitDef2=115 unitUsr2=115
+65701 001001001001 PhantomControlConn def 65668.1 65689.1 65701 {10} 
 |===CASE SPECIFICATIONS========================================================
 Parameter_Constants -----------------------------------------------------------
 Backpressure_air=1 unitDef=25 unitUser=25 label="pressure behind water-air heat exchanger"
@@ -3444,8 +3471,6 @@ Disc_Length_Tubes=20 unitDef=3 unitUser=3
 Expansion_Tank_Initial_Volume=0.8 unitDef=0 unitUser=0 label="relative fill volume of expansion tank; 2024 --> 0.5"
 Expansion_Tank_Volume=140 unitDef=750 unitUser=13 label="internal volume of the expansion tank; 2024 --> 137.4"
 Fallback_Massflow_air=100 unitDef=80 unitUser=80 label="massflow through water-air heat exchanger on air side if no mass flow map is present"
-Fan-P-inlet=1 unitDef=25 unitUser=25
-Fan-T-inlet=298.15 unitDef=32 unitUser=34
 Fan_Input_Signal=50 unitDef=0 unitUser=0
 Fin_Pitch=0.75 unitDef=3 unitUser=3 label="Length required for 1 flank of fin"
 Fin_Thickness=0.2 unitDef=3 unitUser=3 label="wall thickness of fin"
@@ -3465,7 +3490,7 @@ Louver_Pitch=1 unitDef=3 unitUser=3 label="effective length of one louver in thi
 Main__air_massflow_factor=1 unitDef=0 unitUser=0 label="factor on the air mass flow lookup"
 Main__Diameter_Vent=5.0 unitDef=3 unitUser=3
 Main__Temperature_air=35 unitDef=34 unitUser=34 label="temperature of inlet air of HX"
-Main__Vehicle_Velocity_Specification_Object=Endurance-1_Vehicle_Velocity unitDef=41 unitUser=41
+Main__Vehicle_Velocity_Specification_Object=Endurance-1_Vehicle_Velocity:1&0 unitDef=41 unitUser=41
 Motor__Cooling_Jacket_Pressure_Drop_Multiplier=1 unitDef=0 unitUser=0 label="multiplier for pressure drop table for cooling jacket"
 Tube_major_dimension=18 unitDef=3 unitUser=3 label="tube major dimension (inner depth)"
 Tube_minor_dimension=1 unitDef=3 unitUser=3 label="tube minor dimension (inner thickness)"
@@ -3473,8 +3498,7 @@ Tube_Wallthickness=0.2 unitDef=3 unitUser=3 label="wall thickness of water pass"
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 ???
-Air_Massflow_over_VVelocity_Specification_Object=Air_Mass_Flow_over_VVelocity_24 unitDef=80 unitUser=80
-Fan-P-outlet=1.0015 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=Air_Mass_Flow_over_VVelocity_24:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=AKG_F-E2 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_24 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.946 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3508,8 +3532,7 @@ Pump_Specification_Object=DaviesCraig_EBP40_24V unitDef=0 unitUser=0 label="pump
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 ???
-Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan unitDef=80 unitUser=80
-Fan-P-outlet=1.0011999999999999 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_24 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.946 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3543,8 +3566,7 @@ Pump_Specification_Object=DaviesCraig_EBP40_24V unitDef=0 unitUser=0 label="pump
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 ???
-Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan unitDef=80 unitUser=80
-Fan-P-outlet=1.0010000000000001 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_24 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.946 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3578,8 +3600,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 "Inverter Powermodule Change"
-Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan unitDef=80 unitUser=80
-Fan-P-outlet=1.0005 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_24 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.946 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3613,8 +3634,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 "Inverter Cooling Plate Dresden V35"
-Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan unitDef=80 unitUser=80
-Fan-P-outlet=0.9999999999999999 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_25_V35 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.5 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3648,8 +3668,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 "Tubing diameter change"
-Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan unitDef=80 unitUser=80
-Fan-P-outlet=0.998 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_25_V35 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.5 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3683,8 +3702,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 "#6, change of thermal resistances"
-Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan unitDef=80 unitUser=80
-Fan-P-outlet=0.998 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_25_V35 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.5 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3718,8 +3736,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 "#8, San Ace 92 mm fan not overblown"
-Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan_not_overblown unitDef=80 unitUser=80
-Fan-P-outlet=0.998 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan_not_overblown:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_25_V35 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.5 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3753,8 +3770,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 "#9, San Ace 92 mm fan worst case"
-Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan_worst_case unitDef=80 unitUser=80
-Fan-P-outlet=0.998 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan_worst_case:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_25_V35 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.5 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3788,8 +3804,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 "#10, San Ace 92 mm fan not overblown, 6 mm hose"
-Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan_not_overblown unitDef=80 unitUser=80
-Fan-P-outlet=0.998 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=25er_Approximation_SanAce_92_mm_fan_not_overblown:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_25_V35 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.5 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3823,8 +3838,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 "#11, 25 Stallardo final"
-Air_Massflow_over_VVelocity_Specification_Object=Air_Mass_Flow_over_VVelocity_Stallardo25 unitDef=80 unitUser=80
-Fan-P-outlet=0.998 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=Air_Mass_Flow_over_VVelocity_Stallardo25:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_24 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.946 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3858,8 +3872,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameter_Off -----------------------------------------------------------------
 "#12, 25 Stallardo final Maxi Spec"
-Air_Massflow_over_VVelocity_Specification_Object=Air_Mass_Flow_over_VVelocity_Stallardo25 unitDef=80 unitUser=80
-Fan-P-outlet=0.998 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=Air_Mass_Flow_over_VVelocity_Stallardo25:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_25_V35 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.5 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3893,8 +3906,7 @@ Pump_Specification_Object=Bosch_PCE_039202453G unitDef=0 unitUser=0 label="pump 
 End ---------------------------------------------------------------------------
 Parameters --------------------------------------------------------------------
 "#13, 25 Stallardo refined Maxi Spec"
-Air_Massflow_over_VVelocity_Specification_Object=Air_Mass_Flow_over_VVelocity_Stallardo25 unitDef=80 unitUser=80
-Fan-P-outlet=0.998 unitDef=25 unitUser=25
+Air_Massflow_over_VVelocity_Specification_Object=Air_Mass_Flow_over_VVelocity_Stallardo25:1&0 unitDef=80 unitUser=80
 HX_Water_Air_Spec_Object=25_MKK_1-Reihe_concept_1 unitDef=0 unitUser=0 label="water air heat exchanger specification objekt"
 Inverter__Cooling_Plate_Conv_HTC_Spec_Object=Conv_HTC_Cooling_Plate_25_V35 unitDef=0 unitUser=0 label="Inverter__Cooling_Plate_Conv_HTC_Specification_Object"
 Inverter__Cooling_Plate_Inlet_Diameter=8.5 unitDef=3 unitUser=3 label="cross section diameter on inlet"
@@ -3938,13 +3950,17 @@ End ---------------------------------------------------------------------------
         <part id="65670"/>
         <part id="65673"/>
         <part id="65672"/>
-        <part id="65675"/>
         <part id="65677"/>
         <part id="65676"/>
         <part id="65551"/>
-        <part id="65550"/>
+        <part id="65679"/>
         <part id="65678"/>
+        <part id="65681"/>
+        <part id="65680"/>
+        <part id="65683"/>
+        <part id="65682"/>
         <part id="65557"/>
+        <part id="65684"/>
         <part id="65559"/>
         <part id="65558"/>
         <part id="65561"/>
@@ -4010,17 +4026,17 @@ End ---------------------------------------------------------------------------
         <part id="65661"/>
         <part id="65660"/>
     </main>
-    <sa-component center_x="1940" center_y="960" id="65686" name="EMotorFan" sa_id="1" size_x="57" size_y="60"/>
+    <sa-component center_x="1940" center_y="960" id="65692" name="EMotorFan" sa_id="1" size_x="57" size_y="60"/>
     <subassembly id="1" level="2" name="EMotorFan" pa_id="0" size_x="1000" size_y="1000">
-        <part id="65679"/>
-        <part id="65681"/>
-        <part id="65680"/>
-        <part id="65683"/>
-        <part id="65682"/>
         <part id="65685"/>
-        <part id="65684"/>
-        <part-sa-connection center_x="880" center_y="440" comp_id="65683" id="65687" main-connection-id="65668" name="FromPart_InputSignal" size_x="16" size_y="16"/>
-        <part-sa-connection center_x="480" center_y="260" comp_id="65685" id="65688" main-connection-id="65669" name="ToPart_36" size_x="16" size_y="16"/>
+        <part id="65687"/>
+        <part id="65686"/>
+        <part id="65689"/>
+        <part id="65688"/>
+        <part id="65691"/>
+        <part id="65690"/>
+        <part-sa-connection center_x="880" center_y="440" comp_id="65689" id="65693" main-connection-id="65668" name="FromPart_InputSignal" size_x="16" size_y="16"/>
+        <part-sa-connection center_x="480" center_y="260" comp_id="65691" id="65694" main-connection-id="65669" name="ToPart_36" size_x="16" size_y="16"/>
     </subassembly>
 </subassembly-extension>
 |===COMPOUND INFO==============================================================

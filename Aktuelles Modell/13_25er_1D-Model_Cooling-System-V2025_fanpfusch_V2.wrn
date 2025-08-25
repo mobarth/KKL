@@ -1,0 +1,29 @@
+ *STATUS: ------------------ Start of Case 1 -----------------------------------
+
+  Case Number:        1 of  1
+  Case Setup Number:  13
+
+*ALERT:FlowPDropTableRef/Pressure_Drop_Cooling_Plate_25_V35
+      has static pressure drop entered but it's used at 2 locations
+      which have different upstream/downstream areas. This might lead
+      to wrong results. Please make a copy of this object and use it 
+      at the 2nd location.
+
+*ALERT:A FluidReservoir and/or Tank3D part(s) were detected in a flow circuit 
+      using the Implicit flow solver, but the attribute 'Alternate Implicit
+      Solver for Faster Convergence of Multi-Fluid Flows' in Advanced Setup ->
+      Flow is set to "off". Setting it to 'v2019' can help improve convergence
+      and reduce computation time.
+
+*WARN:The circuit "Flow 2 (Column 1)"
+      appears to be a closed, fixed-volume system.
+      Calculation of the absolute pressure is extremely dependent on
+      temperature for a liquid and may not be reliable.
+      Convergence difficulties may be encountered.
+
+ *STATUS: ------------------ Start of Time Stepping, Case 1 --------------------
+
+ *STATUS: ------------------ Summary of Case 1 ---------------------------------
+
+ *STATUS: ------------------ END OF RUN 25-AUG-25 17:22:34 ---------------------
+
